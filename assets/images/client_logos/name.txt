@@ -1,0 +1,37 @@
+ Volume in drive E is Extras
+ Volume Serial Number is 99AA-BB80
+
+ Directory of E:\Proj\csMohan\assets\images\client_logos
+
+05-10-2020  22:25    <DIR>          .
+05-10-2020  22:25    <DIR>          ..
+01-10-2020  22:34             3,364 ADP india pvt ltd.png
+01-10-2020  22:25             5,920 aishwarya led private limited.jpg
+01-10-2020  22:17            15,614 allsec technologies ltd.jpg
+01-10-2020  22:25             8,878 aspiration energy pvt ltd.jpg
+01-10-2020  22:08             4,603 Axxelent pharma science pvt ltd.png
+01-10-2020  22:06             9,712 BGR Energy.jpg
+01-10-2020  22:29             7,626 bluedart aviation limited.jpg
+01-10-2020  22:27             9,440 callington india pvt ltd.jpg
+01-10-2020  22:43            13,444 caratlane trading private limited.jpg
+01-10-2020  22:23             4,979 cobra legal solutions pvt ltd.png
+01-10-2020  22:19             8,043 Dr Smilez group of Dental centers.jpg
+01-10-2020  22:09            14,158 ford-credit-logo-tile-397x240-d.jpeg
+01-10-2020  22:09             8,993 Ford-Mobility.jpg
+01-10-2020  22:36            13,133 intelizign engineering services private limited.png
+01-10-2020  22:24             5,905 intellect design arena limited.png
+01-10-2020  22:20            11,688 Kathir Media Private Limited.png
+01-10-2020  22:31             4,407 lancord holdings limited.jpg
+01-10-2020  22:15             3,523 LS automotive India pvt ltd.jpg
+01-10-2020  22:38             2,621 Mavens i softech solutions pvt ltd.png
+01-10-2020  22:05            41,525 media-handler.jpg
+05-10-2020  22:25                 0 name.txt
+01-10-2020  22:16            27,183 nilpeter-logo.png
+01-10-2020  22:21             8,569 Odyssey-Logo-small.png
+01-10-2020  22:32             6,870 polyhose india.jpg
+01-10-2020  22:16             6,077 SIS.png
+01-10-2020  22:33             5,580 sunedison infrastructure limited.png
+01-10-2020  22:08            45,238 Tamilnadu power finance.png
+01-10-2020  22:03             3,615 tvs.png
+              28 File(s)        300,708 bytes
+               2 Dir(s)  385,513,574,400 bytes free
