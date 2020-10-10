@@ -521,6 +521,10 @@ nav.navbar li.nav-item:last-child {
   margin-right: 24px;
 }
 
+.fix-right a {
+  color: #FFFFFF !important;
+}
+
 @media (max-width: 576px) {
   #header {
     height: 86px;
