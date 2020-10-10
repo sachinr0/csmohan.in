@@ -1,3 +1,4 @@
+var www;
 !(function ($) {
     // Smooth scroll for the navigation menu and links with .scrollto classes
     var scrolltoOffset = $('#header').outerHeight() - 1;
@@ -27,6 +28,9 @@
                     $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
                     $('.mobile-nav-overly').fadeOut();
                 }
+                if ($(this).parent().hasClass('show')) {
+                    $(this).parent('.dropdown-menu.show').dropdown('toggle');
+                }
                 return false;
             }
         }
@@ -43,26 +47,28 @@
                 }, 1500, 'easeInOutExpo');
             }
         }
-        $('.customer-logos').slick({
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 1500,
-            arrows: false,
-            dots: false,
-            pauseOnHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4
-                }
-            }, {
-                breakpoint: 520,
-                settings: {
-                    slidesToShow: 3
-                }
-            }]
-        });
+        if (jQuery().slick) {
+            $('.customer-logos').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                arrows: false,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                }, {
+                    breakpoint: 520,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }]
+            });
+        }
     });
     // Mobile Navigation
     if ($('.navbar-nav').length) {
@@ -116,13 +122,15 @@
 
             if (cur_pos >= top && cur_pos <= bottom) {
                 if (cur_pos <= bottom) {
-                    main_nav.find('li').removeClass('active');
+                    main_nav.find('.active').removeClass('active');
                 }
-                main_nav.find('a[href="#' + $(this).attr('id') + '"]').parent('li').addClass('active');
+                var loc = window.location.pathname.split("/").pop();
+                if (!!loc) {
+                    main_nav.find("a[href*='" + loc + "#" + $(this).attr('id') + "']").addClass('active');
+                } else {
+                    main_nav.find("a[href*='#" + $(this).attr('id') + "']").addClass('active');
+                }
             }
-            // if (cur_pos < 300) {
-            //     $(".navbar-nav ul:first li:first, .mobile-menu ul:first li:first").addClass('active');
-            // }
         });
     });
 
@@ -144,21 +152,8 @@
         topSpacing: 0,
         zIndex: '50'
     });
-
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-
-    $('.back-to-top').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 1500, 'easeInOutExpo');
-        return false;
-    });
-    console.log('%c' + 'Developed by Sachin Ranka', 'font-family:Comic Sans MS; font-size:50px; font-weight:bold; background: linear-gradient(#f00, yellow); border-radius: 5px; padding: 20px')
+    var styles = [
+        'border: 1px solid #fd746c', 'color: white', 'display: block', 'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)', 'background: #2C3E50;', 'background: -webkit-linear-gradient(to right, #2c3e50, #fd746c)', 'background: linear-gradient(to right, #2c3e50, #fd746c)', 'line-height: 40px', 'text-align: center', 'font-weight: bold', 'font-size: 20px', 'padding: 20px', 'font-family: "Lucida Console", Courier, monospace;', 'border-radius: 10px'
+    ].join(';');
+    console.log("%c Developed and created by Sachin Ranka." + "%cFor more details: www.linkedin.com/in/sachinranka4u", styles, 'color:blue');
 })(jQuery);

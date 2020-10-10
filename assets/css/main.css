@@ -282,6 +282,15 @@ nav.navbar li.nav-item:last-child {
   right: 15px;
 }
 
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #d2d2d2;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #2b5f9c;
+  color: #FFFFFF !important;
+}
+
 @media (max-width: 1366px) {
   .nav-menu .drop-down .drop-down ul {
     left: -90%;
