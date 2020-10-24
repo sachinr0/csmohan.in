@@ -68,6 +68,108 @@
                 filter: none;
             }
         }
+
+        .member-content .details {
+            margin: 20px 0 0 20px;
+            position: relative;
+            padding: 30px;
+            padding-left: 100px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.08);
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        .member-content {
+            margin-bottom: 30px;
+        }
+
+        .member-thumb {
+            text-align: center;
+        }
+
+        .member-thumb h4 {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .member-thumb .title {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #2b5e9b;
+        }
+
+
+
+        .member-content:hover .details {
+            background: #2b5e9b;
+            color: #fff;
+        }
+
+        .member-content.right .details {
+            margin: 20px 20px 0 0;
+            box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .member-content .details:after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: -18px;
+            top: 30px;
+            width: 0px;
+            height: 0px;
+            background: transparent;
+            border: 20px solid transparent;
+            border-left: 20px solid #f5f5f5;
+            box-shadow: -3px 0 0 rgba(0, 0, 0, 0.08);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transition: border-left-color .3s ease-out;
+            transition: border-left-color .3s ease-out;
+        }
+
+        .member-content.right .details:after {
+            position: absolute;
+            left: auto;
+            right: -17px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid #f5f5f5;
+            box-shadow: 3px 0 0 0 rgba(0, 0, 0, 0.08);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: border-right-color .3s ease-out;
+            transition: border-right-color .3s ease-out;
+        }
+
+        .member-content:hover .details:after {
+            border-left-color: #2b5e9b;
+        }
+
+        .member-content.right:hover .details:after {
+            border-left-color: transparent;
+            border-right-color: #2b5e9b;
+        }
+
+        .member-content .details:before {
+            display: block;
+            content: "\201D";
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            font-size: 120px;
+            font-weight: 800;
+            line-height: 60px;
+            font-family: Arial;
+            color: #2b5e9b;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        .member-content:hover .details:before {
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -94,7 +196,7 @@
                 <div class="col-auto float-right text-light d-none d-md-block fix-right">
                     <p class="text-12px"><i class="ri-mail-fill"></i> <a
                             href="mailto:mohan@csmohan.in">mohan@csmohan.in</a><br /><i class="ri-phone-fill"></i>
-                        +91-98843-90406</p>
+                        +91-90030-12871</p>
                 </div>
             </div>
             <nav class="navbar navbar-expand-lg navbar-light text-center hide-lt-lg">
@@ -133,7 +235,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link text-light" href="digital-signature.html">Digital
                                 Signature</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Team</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="team.html">Team</a></li>
                         <!-- <li class="nav-item"><a class="nav-link text-light" href="#">Articles</a></li> -->
                         <li class="nav-item"><a class="nav-link text-light" href="photo-gallery.html">Photo Gallery</a>
                         </li>
@@ -148,44 +250,116 @@
 
         <h1 class="my-4 text-center">Meet The Team</h1>
 
+        <div class="container mx-auto">
+            <div class="row member-content">
+                <div class="col-md-3 offset-sm-1 member-thumb fade-right in">
+                    <img class="img-fluid img-center img-thumbnail rounded-circle"
+                        src="https://res.cloudinary.com/csmohan/image/upload/v1603531277/team/CSMohanKumar_vhfgtx.png"
+                        alt="">
+                    <h4>A. Mohan Kumar</h4>
+                    <p class="title">Founder</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="details">
+                        <p>A. Mohan Kumar is a Corporate Lawyer, Practicing Company Secretary and a Cost Accountant. He
+                            has more than 20 years of experience as Company Secretary in various Listed and Unlisted
+                            Companies including manufacturing, Software and ITES industries.</p>
+                        <p>He has worked in many multi-national Companies and has headed their Legal and compliance
+                            divisions successfully for the past two decades.</p>
+                    </div>
+                </div>
+            </div>
+            <blockquote class="blockquote">
+                <p>More details about Mr. Mohan,</p>
+                <ul>
+                    <li>Mr. Mohan is an Insolvency Resolution Professional and successfully handled many IBC Matters.
+                    </li>
+                    <li>Mr. Mohan is a Regional council member and Past Chairman of Institute of Company Secretaries of
+                        India (Southern India Region). He is the Chairman of few important Committees of
+                        – Institute of Company Secretaries of India – Southern Region.</li>
+                    <li>Mr. Mohan is a regular speaker and a faculty in forums like Institute of Company
+                        Secretaries of India, Institute of Chartered Accountants and Bombay Stock Exchange Ltd.
+                    </li>
+                </ul>
+            </blockquote>
+            <div class="row member-content right">
+                <div class="col-md-3 order-sm-2 member-thumb">
+                    <img class="img-fluid img-center img-thumbnail rounded-circle"
+                        src="https://res.cloudinary.com/csmohan/image/upload/v1603531603/team/sneha_ikykqr.png" alt="">
+                    <h4>M Sneha</h4>
+                    <p class="title">Qualified Company Secretary</p>
+                </div>
+                <div class="col-md-8 order-sm-1">
+                    <div class="details">
+                        <p>M Sneha became a Member of Institute of Company Secretaries of India at a young age of 21.
+                        </p>
+                        <p>She is also a All India Rank holder in Foundation and Intermediate exams of ICSI, has 3 years
+                            working experience with excellent exposure in Secretarial and Legal areas.</p>
+                        <p>She has legal background also & she handles most of the Listed Companies work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="text-center">Other team members</h4>
+        <br />
         <div class="row" id="team">
-            <!-- Team Member 1 -->
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card border-0 shadow">
-                    <img src="https://source.unsplash.com/TMgQMXoglsM/500x350" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Mohan Kumar</h5>
-                        <div class="card-text text-black-50">Founder</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team Member 2 -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card border-0 shadow">
-                    <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">M Sneha</h5>
-                        <div class="card-text text-black-50">Team member</div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team Member 1 -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                <div class="card border-0 shadow">
-                    <img src="https://source.unsplash.com/TMgQMXoglsM/500x350" class="card-img-top" alt="...">
+                    <img src="https://res.cloudinary.com/csmohan/image/upload/v1603533469/team/surabhi_unyoxy.png"
+                        class="card-img-top" alt="Surabhi Ranka">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Surabhi Ranka</h5>
-                        <div class="card-text text-black-50">Team member</div>
+                        <div class="card-text text-black-50">Associate</div>
                     </div>
                 </div>
             </div>
-            <!-- Team Member 2 -->
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="card border-0 shadow">
-                    <img src="https://source.unsplash.com/9UVmlIb0wJU/500x350" class="card-img-top" alt="...">
+                    <img src="https://res.cloudinary.com/csmohan/image/upload/v1603533670/team/Vennila_ngngbk.png"
+                        class="card-img-top" alt="Vennila">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Vennila</h5>
-                        <div class="card-text text-black-50">Team member</div>
+                        <div class="card-text text-black-50">Associate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card border-0 shadow">
+                    <img src="https://res.cloudinary.com/csmohan/image/upload/v1603533909/team/Nageshwarn_yazlrn.png"
+                        class="card-img-top" alt="Nageswaran">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Nageswaran</h5>
+                        <div class="card-text text-black-50">Associate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card border-0 shadow">
+                    <img src="https://res.cloudinary.com/csmohan/image/upload/v1603534116/team/Sakthidevi_pwbyqu.png"
+                        class="card-img-top" alt="Sakthidevi">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Sakthidevi</h5>
+                        <div class="card-text text-black-50">Associate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card border-0 shadow">
+                    <img src="https://res.cloudinary.com/csmohan/image/upload/v1603534297/team/Surendar_aadzf8.png"
+                        class="card-img-top" alt="Surendar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Surendar</h5>
+                        <div class="card-text text-black-50">Associate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="card border-0 shadow">
+                    <img src="https://res.cloudinary.com/csmohan/image/upload/v1603534785/team/Vidhyeswari_u2tg42.png"
+                        class="card-img-top" alt="Vidhyesvari">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-0">Vidhyesvari</h5>
+                        <div class="card-text text-black-50">Associate</div>
                     </div>
                 </div>
             </div>
@@ -215,7 +389,7 @@
                         72, VGP Selva Nagar, Second Main road,<br />
                         Velachery, Chennai-600 042.<br />
                         (Near Velachery Railway Station & PVR Cinemas )</p>
-                    <p class="mb-0"><i class="ri-phone-fill mr-3"></i>+91-98843-90406 / 90806-14956</p>
+                    <p class="mb-0"><i class="ri-phone-fill mr-3"></i>+91-90030-12871 / 98843-90406</p>
                     <p><i class="ri-mail-line mr-3"></i>mohan@csmohan.in, needamohan@gmail.com</p>
                 </div>
             </div>
@@ -229,7 +403,8 @@
                 </div>
                 <div class="col-lg-4 copyright">
                     <p class="text-lg-right text-xl-right"><small>Created & Designed by <a
-                                href="https://www.linkedin.com/in/sachinranka4u" target="_blank"> Sachin</a></small></p>
+                                href="https://www.linkedin.com/in/sachinranka4u" target="_blank"> Sachin</a></small>
+                    </p>
                 </div>
             </div>
         </div>
